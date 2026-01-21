@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>울산공업고등학교 | 도제 통합 업무 포털</title>
+  <!-- Google Fonts: Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="theme-navy">
+  <div class="portal-wrapper">
+    <!-- Side Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="school-logo">⚙️</div>
+        <div class="school-title">
+          <h1>울산공업고등학교</h1>
+          <span>도제학교 업무 포털</span>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <div class="nav-group">메인 메뉴</div>
+        <button class="nav-btn" data-page="home">📋 종합 대시보드</button>
+        <button class="nav-btn" data-page="intro">🏫 도제교육 안내</button>
+        <button class="nav-btn" data-page="companies">🗺️ 협약 기업 지도</button>
+
+        <div class="nav-group">학사 행정</div>
+        <button class="nav-btn" data-page="schedule">📅 학사 및 시간표</button>
+        <button class="nav-btn" data-page="students">👥 학생 관리 현황</button>
+
+        <div class="nav-group">시스템 정보</div>
+        <button class="nav-btn" data-page="settings">🛠️ 시스템 설정</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>© 2026 Ulsan Technical HS</p>
+        <p>Apprenticeship Management</p>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="workspace">
+      <!-- Top Header Bar -->
+      <header class="top-bar">
+        <div class="page-indicator">
+          <span id="currentPageTitle">종합 대시보드</span>
+        </div>
+
+        <div class="top-actions">
+          <div class="semester-control">
+            <button class="sem-btn active" id="btnSem1" onclick="changeSemester('1')">제1학기</button>
+            <button class="sem-btn" id="btnSem2" onclick="changeSemester('2')">제2학기</button>
+          </div>
+          <div class="user-profile">
+            <span class="user-role">관리자님</span>
+            <div class="avatar">👤</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dynamic Content -->
+      <main class="content-area">
+        <div id="mainContent" class="fade-in">
+          <!-- Loaded dynamically -->
+        </div>
+      </main>
+
+      <!-- Bottom Information -->
+      <footer class="portal-footer">
+        <div class="footer-info">
+          <span>울산광역시 중구 염포로 23 (남외동)</span>
+          <span class="divider">|</span>
+          <span>TEL: 052-290-7100</span>
+          <span class="divider">|</span>
+          <span>FAX: 052-292-0000</span>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="scheduleData.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
