@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쌤투쌤 (Ssam2Ssam) - 프로젝트 문서</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338ca;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-app: #f3f4f6;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-app);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        code {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            font-size: 0.95em;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            background-color: #eef2ff;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            color: var(--primary-hover);
+        }
+
+        .folder-structure {
+            font-family: monospace;
+            white-space: pre;
+            line-height: 1.4;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>쌤투쌤 (Ssam2Ssam)</h1>
+        <p class="subtitle">선생님들을 위한 소통 및 모임 플랫폼입니다.</p>
+
+        <h2>🚀 프로젝트 소개</h2>
+        <p>쌤투쌤(Ssam2Ssam)은 선생님들이 서로 소통하고, 모임을 만들고, 학교 정보를 공유할 수 있는 커뮤니티 플랫폼입니다.<br>
+        직관적인 UI와 부드러운 애니메이션을 통해 사용자 친화적인 경험을 제공합니다.</p>
+
+        <h2>✨ 주요 기능</h2>
+        <ul>
+            <li><strong>홈 (Home)</strong>: 대시보드 및 주요 현황 확인</li>
+            <li><strong>모임 찾기 (Meeting Finder)</strong>: 관심사 기반의 모임 검색 및 참여 신청</li>
+            <li><strong>인연 찾기 (Connection Finder)</strong>: 멘토/멘티 또는 동료 선생님 찾기 및 네트워킹</li>
+            <li><strong>학교 찾기 (School Search)</strong>: 지역별 학교 정보 검색</li>
+            <li><strong>반응형 레이아웃</strong>:
+                <ul>
+                    <li><strong>Desktop</strong>: 직관적인 사이드바 네비게이션</li>
+                    <li><strong>Mobile</strong>: 편리한 하단 탭 바 (Bottom Navigation)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>🛠 기술 스택</h2>
+        <ul>
+            <li><strong>Frontend</strong>: React (v19), Vite</li>
+            <li><strong>Routing</strong>: React Router DOM (v7)</li>
+            <li><strong>Styling</strong>: CSS Variables (Custom Design System), Tailwind CSS classes</li>
+            <li><strong>Icons</strong>: Lucide React</li>
+            <li><strong>Animation</strong>: Framer Motion</li>
+            <li><strong>HTTP Solution</strong>: Axios</li>
+        </ul>
+
+        <h2>📦 설치 및 실행 방법</h2>
+        <p>이 프로젝트는 Node.js 환경에서 실행됩니다.</p>
+        <ol>
+            <li>
+                <strong>프로젝트 클론</strong>
+                <pre><code>git clone &lt;repository-url&gt;
+cd homework3</code></pre>
+            </li>
+            <li>
+                <strong>의존성 패키지 설치</strong>
+                <pre><code>npm install</code></pre>
+            </li>
+            <li>
+                <strong>개발 서버 실행</strong>
+                <pre><code>npm run dev</code></pre>
+                <p>실행 후 브라우저에서 <code>http://localhost:5173</code> 접속</p>
+            </li>
+            <li>
+                <strong>프로덕션 빌드</strong>
+                <pre><code>npm run build</code></pre>
+            </li>
+        </ol>
+
+        <h2>📂 폴더 구조</h2>
+        <pre><code class="folder-structure">src/
+├── components/       # 재사용 가능한 UI 컴포넌트 (Sidebar 등)
+├── pages/            # 라우트 페이지 컴포넌트
+│   ├── Home.jsx
+│   ├── MeetingFinder.jsx
+│   ├── ConnectionFinder.jsx
+│   └── SchoolSearch.jsx
+├── App.jsx           # 메인 레이아웃 및 라우터 설정
+└── index.css         # 전역 스타일 및 디자인 토큰</code></pre>
+
+        <h2>📝 라이선스</h2>
+        <p>MIT License</p>
+
+        <footer>
+            &copy; 2026 쌤투쌤 (Ssam2Ssam). All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
